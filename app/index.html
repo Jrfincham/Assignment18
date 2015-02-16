@@ -23,26 +23,34 @@
   </head>
   <body>
 
-    <div class="container">
+    <div class="container" id="todo-app">
+    <h1>Todo List</h1>
+    <p class="hide" id="empty">What you need to do today...</p>
+    <ul id="todos" class="unstyled">
+    </ul>
+    <form class="form-inline">
+      <input id="todo-title" type="text" />
+      <button id="add-btn" class="btn btn-success">Add</button>
+    </form>
+    <p>
+      <a href id="remove-completed-btn">Remove completed items</a>
+    </p>
+  </div>
 
-      <h1>What you need to do...</h1>
+  <script type="text/html" id="todo-item-template">
+  <label class="checkbox">
+    <input type="checkbox" class="completed-chk" <%- completed ? 'checked="checked"' : '' %> />
+    <%= title %>
+  </label>
+  </script>
 
-      <form id="assTodo">
-        <input type="text" placeholder="To-do's..." value="" />
-      </form>
 
-      <script type="text/template" id="todoTemp">
-
-        <li id="<% id %>" class="<% status %>"><% task %></li>
-
-      </script>
-
-    </div>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/underscore/underscore.js"></script>
+    <script src="../bower_components/backbone/backbone.js"></script>
     <script src="../bower_components/backbone/backbone.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
