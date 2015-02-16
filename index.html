@@ -1,0 +1,45 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Assignment18</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="styles/vendor.css">
+
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="scripts/vendor/modernizr.js"></script>
+  </head>
+  <body>
+
+    <div class="container" id="todo-app">
+    <h1>Todo List</h1>
+    <p class="hide" id="empty">What you need to do today...</p>
+    <ul id="todos" class="unstyled">
+    </ul>
+    <form class="form-inline">
+      <input id="todo-title" type="text" />
+      <button id="add-btn" class="btn btn-success">Add</button>
+    </form>
+    <p>
+      <a href id="remove-completed-btn">Remove completed items</a>
+    </p>
+  </div>
+
+  <script type="text/html" id="todo-item-template">
+  <label class="checkbox">
+    <input type="checkbox" class="completed-chk" <%- completed ? 'checked="checked"' : '' %> />
+    <%= title %>
+  </label>
+  </script>
+
+
+
+    <script src="scripts/vendor.js"></script>
+
+        <script src="scripts/main.js"></script>
+</body>
+</html>
