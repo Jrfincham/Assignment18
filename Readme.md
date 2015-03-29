@@ -14,7 +14,7 @@ This is a Todo List I made using backbone.js
   
 ### How to use it 
 
-  * `git clone git@github.com:Jrfincham/ToDo-Backbone.git`
+  * `git clone git@github.com:Jrfincham/To-Do_List.git`
   * `cd ToDo-Backbone`
   * `npm install`
   * `bower install`
